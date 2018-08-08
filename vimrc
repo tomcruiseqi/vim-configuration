@@ -21,6 +21,7 @@ Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()            			" required
 filetype plugin indent on    			" required
+
 """" END Vundle Configuration 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -49,4 +50,17 @@ syntax on
 " YouCompleteMe Configuration
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ycm_confirm_extra_conf = 0
+let g:ycm_confirm_extra_conf = 0		" always run the found .ycm_extra_conf.py
+
+" GoTo subcommands maps
+nnoremap <Leader>h :YcmCompleter GoToInclude<CR>			" GoToInclude
+nnoremap <Leader>d :YcmCompleter GoToDeclaration<CR>		" GoToDeclaration
+nnoremap <Leader>m :YcmCompleter GoToDefinition<CR>			" GoToDefinition
+nnoremap <Leader>j :YcmCompleter GoTo<CR>					" GoTo
+nnoremap <Leader>k :YcmCompleter GoToImprecise<CR>			" GoToImprecise
+nnoremap <Leader>t :YcmCompleter GetType<CR>				" GetType
+nnoremap <Leader>r :YcmCompleter GetTypeImprecise<CR>		" GetTypeImprecise
+nnoremap <Leader>p :YcmCompleter GetParent<CR>				" GetParent
+nnoremap <Leader>c :YcmCompleter GetDoc<CR>					" GetDoc
+nnoremap <Leader>f :YcmCompleter GetDocImprecise<CR>		" GetDocImprecise
+
