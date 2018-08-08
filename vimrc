@@ -44,3 +44,9 @@ set cursorline
 " Theme and Styling				" Basic
 syntax on
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" YouCompleteMe Configuration
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ycm_confirm_extra_conf = 0
