@@ -5,7 +5,6 @@ This project aims to help setting up VIM C++ development environment. Thanks to 
 Allan MacGrager
 If you want more details, please read https://dev.to/allanmacgregor/vim-is-the-perfect-ide-e80.
 
-Installation
 1. Install Vundle. Refers to  https://github.com/VundleVim/Vundle.vim.
 
         git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vi
@@ -19,4 +18,6 @@ Installation
 		install.sh --clang-completer --go-completer
 
 3. Configuration of YCM
+
     I use bazel to build c++ projects. So first, I need a .ycm_extra_conf.py script to invoke bazel to get the compilation database, here i cloned the https://github.com/grailbio/bazel-compilation-database repository. Because --aspects option of bazel no longer supports bzl file path, so, I need to copy the .ycm_extra_conf.py and aspects.bzl to my bazel workspace. Don't use symbolic links, sometimes it fails.
+    If there is no BUILD file in the workspace, create one in case of bazel failure.
