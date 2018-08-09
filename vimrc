@@ -64,3 +64,11 @@ nnoremap <Leader>p :YcmCompleter GetParent<CR>				" GetParent
 nnoremap <Leader>c :YcmCompleter GetDoc<CR>					" GetDoc
 nnoremap <Leader>f :YcmCompleter GetDocImprecise<CR>		" GetDocImprecise
 
+" Where to show the result of GoTo* commands.
+let g:ycm_goto_buffer_command = "new tab"
+
+" Python interpreter for ycmd.
+let g:ycm_python_binary_path = "/usr/local/bin/python3"
+
+" Get identifiers from the tags files.
+let g:ycm_collect_identifiers_from_tags_files = 1
