@@ -64,3 +64,9 @@ nnoremap <Leader>p :YcmCompleter GetParent<CR>				" GetParent
 nnoremap <Leader>c :YcmCompleter GetDoc<CR>					" GetDoc
 nnoremap <Leader>f :YcmCompleter GetDocImprecise<CR>		" GetDocImprecise
 
+" Refectoring and diagnosis configuration
+let g:ycm_echo_current_diagnostic = 1	" always show the diagnostic messages.
+
+nnoremap <Leader>di :YcmDiags<CR>							" YcmDiags
+nnoremap <Leader>fi :YcmCompleter FixIt<CR>					" FixIt
+
