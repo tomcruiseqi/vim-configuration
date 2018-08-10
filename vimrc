@@ -23,6 +23,9 @@ Plugin 'xolox/vim-misc'					" Standard vim-library for xolox's other vim-plugins
 Plugin 'xolox/vim-easytags'				" Auto-generator of tags using exuberant-ctags
 Plugin 'majutsushi/tagbar'				" Show tags in seperate sub-window
 
+" User Interface optimization
+Plugin 'morhetz/gruvbox'				" Wonderful vim color scheme
+
 call vundle#end()            			" required
 filetype plugin indent on    			" required
 
@@ -46,8 +49,13 @@ set laststatus=2
 " Enable highlighting of the current line
 set cursorline
 
-" Theme and Styling				" Basic
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" User Interface settings
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
+colorscheme gruvbox
 
 
 
