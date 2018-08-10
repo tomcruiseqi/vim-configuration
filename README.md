@@ -21,3 +21,7 @@ If you want more details, please read https://dev.to/allanmacgregor/vim-is-the-p
 
     I use bazel to build c++ projects. So first, I need a .ycm_extra_conf.py script to invoke bazel to get the compilation database, here i cloned the https://github.com/grailbio/bazel-compilation-database repository. Because --aspects option of bazel no longer supports bzl file path, so, I need to copy the .ycm_extra_conf.py and aspects.bzl to my bazel workspace. Don't use symbolic links, sometimes it fails.
     If there is no BUILD file in the workspace, create one in case of bazel failure.
+
+	GoTo commands key map binding and some handful option settings.
+
+
