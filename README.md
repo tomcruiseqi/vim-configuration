@@ -24,4 +24,17 @@ If you want more details, please read https://dev.to/allanmacgregor/vim-is-the-p
 
 	GoTo commands key map binding and some handful option settings.
 
+4. How to create and show the tags.
+	
+	Use exuberant-ctags (In ubuntu just run: sudo apt-get install exuberant-ctags, and in OS X, just run brew install ctags)
+	Use vim-easytags (https://github.com/xolox/vim-easytags) to generate ctag while creating, modifing and saving the files. By default, easytags saves tags to ~/.vimtags, but I made it happened in the directory of current file by the following commands:
+			
+			set tags=./tags                                             " Save the tags to directory of current file.
+ 			let g:easytags_dynamic_files = 1                            " Write to the first tags file seen by Vim.
+
+	
+	Use tagbar (https://github.com/majutsushi/tagbar) to constuct and present the tree of tags. And map the TagbarToggle command to <Leader>tt shortcut by:
+			
+			https://github.com/majutsushi/tagbar
+
 
