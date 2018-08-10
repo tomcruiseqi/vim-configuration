@@ -70,3 +70,11 @@ let g:ycm_echo_current_diagnostic = 1	" always show the diagnostic messages.
 nnoremap <Leader>di :YcmDiags<CR>							" YcmDiags
 nnoremap <Leader>fi :YcmCompleter FixIt<CR>					" FixIt
 
+" Where to show the result of GoTo* commands.
+let g:ycm_goto_buffer_command = "new tab"
+
+" Python interpreter for ycmd.
+let g:ycm_python_binary_path = "/usr/local/bin/python3"
+
+" Get identifiers from the tags files.
+let g:ycm_collect_identifiers_from_tags_files = 1
