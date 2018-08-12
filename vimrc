@@ -22,9 +22,19 @@ Plugin 'tpope/vim-dispatch'				" Run tasks asynchronously.
 Plugin 'xolox/vim-misc'					" Standard vim-library for xolox's other vim-plugins
 Plugin 'xolox/vim-easytags'				" Auto-generator of tags using exuberant-ctags
 Plugin 'majutsushi/tagbar'				" Show tags in seperate sub-window
+Plugin 'octol/vim-cpp-enhanced-highlight'			" Cpp syntax highlighting for c and c++ 11/14/17
 
 " User Interface optimization
 Plugin 'morhetz/gruvbox'				" Wonderful vim color scheme
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/nerdtree'			" Explorer of files.
+Plugin 'ryanoasis/vim-devicons'			" Fonts and icons for nerdtree
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'	" Nerd tree icons of folder and file
+Plugin 'ervandew/supertab'				" Allow for all of the insert completion using tab key.
+
+" Git support
+Plugin 'tpope/vim-fugitive'				" Run git commands and show the result in vim
 
 call vundle#end()            			" required
 filetype plugin indent on    			" required
@@ -56,6 +66,35 @@ set cursorline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 colorscheme gruvbox
+set background=dark										" Dark mode
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 
+" Gruvbox configurationn
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <silent> [oh :call gruvbox#hls_show()<CR>
+nnoremap <silent> ]oh :call gruvbox#hls_hide()<CR>
+nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
+
+nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
+nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
+nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 
+" vim-cpp-enhanced-highlight configurationn
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:cpp_class_scope_highlight = 1						" Class scope highlight
+let g:cpp_member_variable_highlight = 1					" Member variables highlight
+let g:cpp_class_decl_highlight = 1						" Class name in declaration highlight
+let g:cpp_experimental_simple_template_highlight = 1	" Most cases of template highlight
+let g:cpp_concepts_highlight = 1						" Key words concept and requires highlight
 
 
 
@@ -113,3 +152,26 @@ let g:easytags_dynamic_files = 1							" Write to the first tags file seen by Vi
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <Leader>tt :TagbarToggle<CR>						" Show tag tree in another sub-window.
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" Airline configuration
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline#extensions#tabline#enabled = 1 				" Display all buffers when there is only one tab open.
+let g:airline#extensions#tabline#formatter = 'default'		" Default formatter of tabline
+
+let g:airline_powerline_fonts = 1							" Show the nicer powerline symbols.
+let g:airline_theme = "papercolor"							" Use the papercolor.
+let g:airline_skip_empty_sections = 1						" Skip the empty section and don't show the angle at the end.
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 
+" NERDTree configuration
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <Leader>nn :NERDTreeToggle<CR>							" Show nerdtree.

@@ -37,4 +37,17 @@ If you want more details, please read https://dev.to/allanmacgregor/vim-is-the-p
 			
 			https://github.com/majutsushi/tagbar
 
+5. Setup User-friendly Interface using colorscheme, cpp syntax enhancement plugin, nerdtree and airline.
+
+	First, chose a colorscheme, here I use gruvbox (https://github.com/morhetz/gruvbox). When done, open a cplusplus file in vim and you will see, there is little improment after using gruvbox, why?
+	After searching in Google, I found the vim-cpp-enhanced-highlight plugin which provides more highlights for the function, variables and standard libraries.
+	
+	Then, we need the airline plugin to beauty our status line and tab line. If you want a fancier vim, patch the powerline-fonts. Here I chose the papercolor theme.
+
+	When I reopen the vim, I just see the current file and these files opened by jumping. I need a file explorer. Here the NerdTree plugin comes to me.
+	But, there's just a tree showing the contents of current file's directory, no more others such as different colors for different filetypes. Here I got vim-devicons, vim-nerdtree-syntax-highlight. Install the hacked nerd font and set the terminal's font to it.
+
+	Last, use the supertab plugin to make all of my insert completion using tab key.
+
+	There are sompe configurations for these plugins above, please see the vimrc in this repository.
 
