@@ -35,6 +35,8 @@ Plugin 'ervandew/supertab'				" Allow for all of the insert completion using tab
 
 " Git support
 Plugin 'tpope/vim-fugitive'				" Run git commands and show the result in vim
+Plugin 'godlygeek/tabular'				" Needed by vim-markdown
+Plugin 'plasticboy/vim-markdown'		" Viewing and writing markdown files.
 
 call vundle#end()            			" required
 filetype plugin indent on    			" required
@@ -106,16 +108,16 @@ let g:cpp_concepts_highlight = 1						" Key words concept and requires highlight
 let g:ycm_confirm_extra_conf = 0		" always run the found .ycm_extra_conf.py
 
 " GoTo subcommands maps
-nnoremap <Leader>h :YcmCompleter GoToInclude<CR>			" GoToInclude
-nnoremap <Leader>d :YcmCompleter GoToDeclaration<CR>		" GoToDeclaration
-nnoremap <Leader>m :YcmCompleter GoToDefinition<CR>			" GoToDefinition
-nnoremap <Leader>j :YcmCompleter GoTo<CR>					" GoTo
-nnoremap <Leader>k :YcmCompleter GoToImprecise<CR>			" GoToImprecise
-nnoremap <Leader>t :YcmCompleter GetType<CR>				" GetType
-nnoremap <Leader>r :YcmCompleter GetTypeImprecise<CR>		" GetTypeImprecise
-nnoremap <Leader>p :YcmCompleter GetParent<CR>				" GetParent
-nnoremap <Leader>c :YcmCompleter GetDoc<CR>					" GetDoc
-nnoremap <Leader>f :YcmCompleter GetDocImprecise<CR>		" GetDocImprecise
+nnoremap <Leader>h :tab YcmCompleter GoToInclude<CR>			" GoToInclude
+nnoremap <Leader>d :tab YcmCompleter GoToDeclaration<CR>		" GoToDeclaration
+nnoremap <Leader>m :tab YcmCompleter GoToDefinition<CR>			" GoToDefinition
+nnoremap <Leader>j :tab YcmCompleter GoTo<CR>					" GoTo
+nnoremap <Leader>k :tab YcmCompleter GoToImprecise<CR>			" GoToImprecise
+nnoremap <Leader>t :YcmCompleter GetType<CR>					" GetType
+nnoremap <Leader>r :YcmCompleter GetTypeImprecise<CR>			" GetTypeImprecise
+nnoremap <Leader>p :YcmCompleter GetParent<CR>					" GetParent
+nnoremap <Leader>c :YcmCompleter GetDoc<CR>						" GetDoc
+nnoremap <Leader>f :YcmCompleter GetDocImprecise<CR>			" GetDocImprecise
 
 " Refectoring and diagnosis configuration
 let g:ycm_echo_current_diagnostic = 1	" always show the diagnostic messages.
@@ -124,7 +126,7 @@ nnoremap <Leader>di :YcmDiags<CR>							" YcmDiags
 nnoremap <Leader>fi :YcmCompleter FixIt<CR>					" FixIt
 
 " Where to show the result of GoTo* commands.
-let g:ycm_goto_buffer_command = "new tab"
+let g:ycm_goto_buffer_command = "split"
 
 " Python interpreter for ycmd.
 let g:ycm_python_binary_path = "/usr/local/bin/python3"
@@ -175,3 +177,12 @@ let g:airline_skip_empty_sections = 1						" Skip the empty section and don't sh
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <Leader>nn :NERDTreeToggle<CR>							" Show nerdtree.
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 
+" Vim-markdown configuration
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:vim_markdown_folding_disabled = 1						" Disable folding.
